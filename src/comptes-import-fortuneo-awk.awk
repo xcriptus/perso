@@ -41,7 +41,7 @@ function checkInt(champ, val, signe, vide) {
   else if (signe == ">0"  && !(num > 0))   erreur(champ, val " n est pas > 0")
   else if (signe == "<=0" && !(num <= 0))  erreur(champ, val " n est pas <= 0")
   else if (signe == ">=0" && !(num >= 0))  erreur(champ, val " n est pas >= 0")
-}
+}  
 
 function is_equal(x, y, eps) {
     return (x - y + 0.0< eps) && (y - x + 0.0 < eps)
@@ -66,37 +66,34 @@ function is_equal(x, y, eps) {
   {
     num_ligne++
 
-    champ = "Date de comptabilisation"
+    champ = "Date operation"
     date_de_comptabilisation  = normalise_date(champ, $(H[champ]))
     checkDate(champ, date_de_comptabilisation)
 
-    champ = "Date operation"
-    date_operation            = normalise_date(champ, $(H[champ]))
-    checkDate(champ, date_operation)
+    # champ = "Date operation"
+    date_operation            = date_de_comptabilisation
+    # checkDate(champ, date_operation)
 
-    champ = "Date de valeur"
+    champ = "Date valeur"
     date_de_valeur            = normalise_date(champ, $(H[champ]))
     checkDate(champ, date_de_valeur)
 
-    info                      = "|1 "  $(H["Libelle simplifie"])
-    info                      = info " |2 "  $(H["Libelle operation"])
-    info                      = info " |3 "  $(H["Informations complementaires"])
-    info                      = info " |4 "  $(H["Type operation"])
-    info                      = info " |5 "  $(H["Categorie"])
-    info                      = info " |6 "  $(H["Sous categorie"])
-    info                      = info " |7"  $(H["Reference"])
+    champ = "libelle"
+    info                      = $(H[champ])
 
-    type_operation            = $(H["Type operation"])
+    type_operation            = "TODO" # $(H["Type operation"])
     # TODO: vérifier si il faut faire un calcul ou pas
     #       voir le fichier importer.md
 
-    debit                     = normalise_nombre($(H["Debit"]))
-    checkInt("Debit", debit, "0<", "vide")
+    champ = "Debit"
+    debit                     = normalise_nombre($(H[champ]))
+    checkInt(champ, debit, "0<", "vide")
 
-    credit                    = normalise_nombre($(H["Credit"]))
-    checkInt("Credit", credit, ">0", "vide")
+    champ = "Credit"
+    credit                    = normalise_nombre($(H[champ]))
+    checkInt(champ, credit, ">0", "vide")
 
-    pointage                  = $(H["Pointage operation"])
+    pointage                  = "0"
 
     compte                    = code_compte
 

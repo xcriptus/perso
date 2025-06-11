@@ -1,6 +1,25 @@
+#!/bin/bash
+# Script pour importer les CSV de la BPA dans le format attendu par l'application comptes
+# Ce script prend en paramètre le nom du fichier CSV, le code du compte, le dernier numéro d'opération,
+# le dernier solde après import et le solde actuel du compte.
+# Il génère un fichier de sortie dans le dossier output avec le nom out-<CSV>.csv
+# Il utilise un fichier awk pour transformer le CSV en un format compatible avec l'application comptes.
+#
 # usage :
 #    comptes-import-bpa.sh bCC-2025-05-29--29052025_59409 bCC 1238 983.90 2830.10
-#DIR=/D2/PERSO-LOCAL/BANQUE/BANQUE-BPA/CSV/bCA
+#
+# TODO: aller chercher le CSV dans le dossier Downloads
+# TODO: aller chercher le dernier numéro et solde dans la feuille de calcul Google Sheets
+# TODO: utiliser bCC_2024-03-12__2025_06-01 comme nom de fichier
+# TODO: faire un mode d'emploi pour télécharger le CSV depuis la BPA
+# TODO: écrire directement dans la feuille de calcul Google Sheets
+# TODO: faire une copie du fichier csv dans /D2/PERSO-LOCAL/BANQUE/BANQUE-BPA/CSV/...
+
+if [ $# -lt 5 ]; then
+  echo "Usage:    $0 <CSV> <CODE_COMPTE> <DERNIER_NUMERO> <DERNIER_SOLDE> <SOLDE_ACTUEL>" >&2
+  echo "Exemple   $0 bCC-2025-06-10 bCC 1865 4375.39 9499.91"
+  exit 1
+fi
 
 CSV=${1?}
 CODE_COMPTE=${2?}         # e.g.  bCC
@@ -27,8 +46,7 @@ head -n 1 ${INPUT_FILE?} \
   | tr -d '\r' \
   > ${TMP_FILE?}
 
-# inverse l'ordre des lignes et nettoite le csv d'origine
-# TODO:voir si on change de separateur pour prendre par defaut celui proposé par la BPA
+# inverse l'ordre des lignes et nettoie le csv d'origine
 cat ${INPUT_FILE?} \
   | tail -n +2  \
   | tac \
