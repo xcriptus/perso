@@ -63,6 +63,7 @@ export function askQuestion(query: string): Promise<string> {
 
 
 
+
 // Exemple d'utilisation
 async function main() {
     // const ETIQUETTES1 = await getEtiquettes1();
@@ -99,7 +100,7 @@ async function main() {
                         match => red(match)
                     );
                     const etiquetteColored = green(etiquette.etiquette1)
-                    console.log( `  "${etiquetteColored}"   <-- ${infoColored}`
+                    console.log( `  "${etiquetteColored}"   <-- ${infoColored}`)
                     
                 }
             }

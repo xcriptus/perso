@@ -93,23 +93,42 @@ function addRow(tableId, cells) {
         return res.data;
     });
 }
+function getCacheMode() {
+    const idx = process.argv.indexOf("--cache");
+    if (idx !== -1 && process.argv[idx + 1]) {
+        const val = process.argv[idx + 1].toLowerCase();
+        if (val === "yes" || val === "ask" || val === "no")
+            return val;
+    }
+    return "ask"; // valeur par défaut
+}
 function loadOrFetch(cachePath, fetchFn, label) {
     return __awaiter(this, void 0, void 0, function* () {
         if (!fs.existsSync(reader_1.DATA_DIR))
             fs.mkdirSync(reader_1.DATA_DIR);
         let useCache = false;
+        const cacheMode = getCacheMode();
         if (fs.existsSync(cachePath)) {
-            const ans = yield (0, reader_1.askQuestion)(`Voulez-vous télécharger à nouveau les ${label} (o/n) ? `);
-            useCache = ans.trim().toLowerCase() !== 'o';
+            if (cacheMode === "yes") {
+                useCache = true;
+            }
+            else if (cacheMode === "no") {
+                useCache = false;
+            }
+            else if (cacheMode === "ask") {
+                const ans = yield (0, reader_1.askQuestion)(`Voulez-vous télécharger les données ${label} (o/n) ? `);
+                useCache = (ans.trim().toLowerCase() !== "o");
+            }
         }
+        // Si le cache n'existe pas, on fetch obligatoirement
         if (useCache) {
-            const data = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
+            const data = JSON.parse(fs.readFileSync(cachePath, "utf-8"));
             console.log(`${label}: ${data.length}`);
             return data;
         }
         else {
             const data = yield fetchFn();
-            fs.writeFileSync(cachePath, JSON.stringify(data, null, 2), 'utf-8');
+            fs.writeFileSync(cachePath, JSON.stringify(data, null, 2), "utf-8");
             console.log(`${label}: ${data.length}`);
             return data;
         }

@@ -27,7 +27,6 @@ export function etiquette1ToString(etiquette: Etiquette1): string {
 }
 
 const CODA_TABLE_TBL_ETIQUETTES1_ID = process.env.CODA_TABLE_TBL_ETIQUETTES1_ID!
-// export const TABLE_IMP_OPERATIONS_ID = process.env.TABLE_IMP_OPERATIONS_ID!
 
 export const Etiquette1CodaMap: Record<string, CodaFieldMap> = {
     etiquette1: { code: 'c-xZFi114wE3', type: 'string', required: true },

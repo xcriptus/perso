@@ -36,7 +36,6 @@ function etiquette1ToString(etiquette) {
     return `Etiquette: ${etiquette.etiquette1}, Comptes: ${etiquette.comptes.join(', ')}, Labels: ${etiquette.labels.join(', ')}, Description: ${etiquette.description || 'N/A'}, Fréquence: ${etiquette.frequence || 'N/A'}, Max: ${etiquette.max || 'N/A'}, Min: ${etiquette.min || 'N/A'}, Mois: ${etiquette.mois ? etiquette.mois.join(', ') : 'N/A'}`;
 }
 const CODA_TABLE_TBL_ETIQUETTES1_ID = process.env.CODA_TABLE_TBL_ETIQUETTES1_ID;
-// export const TABLE_IMP_OPERATIONS_ID = process.env.TABLE_IMP_OPERATIONS_ID!
 exports.Etiquette1CodaMap = {
     etiquette1: { code: 'c-xZFi114wE3', type: 'string', required: true },
     comptes: {
