@@ -47,29 +47,71 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTableRows = getTableRows;
 exports.addRow = addRow;
+exports.loadOrFetch = loadOrFetch;
 const axios_1 = __importDefault(require("axios"));
 const dotenv = __importStar(require("dotenv"));
+const fs = __importStar(require("fs"));
+const reader_1 = require("./reader");
 dotenv.config();
 const CODA_API_TOKEN = process.env.CODA_API_TOKEN;
-console.log("CODA_API_TOKEN:", CODA_API_TOKEN);
-const DOC_ID = process.env.DOC_ID;
-console.log("DOC_ID:", DOC_ID);
-const BASE_URL = "https://coda.io/apis/v1";
+//console.log("CODA_API_TOKEN:", CODA_API_TOKEN);
+const CODA_DOC_ID = process.env.CODA_DOC_ID;
+//console.log("DOC_ID:", DOC_ID);
+const CODA_BASE_URL = 'https://coda.io/apis/v1';
 const headers = {
     Authorization: `Bearer ${CODA_API_TOKEN}`,
 };
-function getTableRows(tableId) {
+function getTableRows(tableId, label) {
     return __awaiter(this, void 0, void 0, function* () {
-        const url = `${BASE_URL}/docs/${DOC_ID}/tables/${tableId}/rows`;
-        console.log("Fetching rows from:", url);
-        const res = yield axios_1.default.get(url, { headers });
-        return res.data.items;
+        let url = `${CODA_BASE_URL}/docs/${CODA_DOC_ID}/tables/${tableId}/rows`;
+        let rows = [];
+        let pageToken = undefined;
+        let firstPage = true;
+        if (label) {
+            process.stdout.write(`Lecture de ${label} : `);
+        }
+        do {
+            const params = {};
+            if (pageToken)
+                params.pageToken = pageToken;
+            const res = yield axios_1.default.get(url, { headers, params });
+            rows = rows.concat(res.data.items);
+            if (label)
+                process.stdout.write('.');
+            pageToken = res.data.nextPageToken;
+        } while (pageToken);
+        if (label) {
+            process.stdout.write(` ${rows.length} ${label}\n`);
+        }
+        return rows;
     });
 }
 function addRow(tableId, cells) {
     return __awaiter(this, void 0, void 0, function* () {
-        const url = `${BASE_URL}/docs/${DOC_ID}/tables/${tableId}/rows`;
+        const url = `${CODA_BASE_URL}/docs/${CODA_DOC_ID}/tables/${tableId}/rows`;
         const res = yield axios_1.default.post(url, { rows: [{ cells }] }, { headers });
         return res.data;
+    });
+}
+function loadOrFetch(cachePath, fetchFn, label) {
+    return __awaiter(this, void 0, void 0, function* () {
+        if (!fs.existsSync(reader_1.DATA_DIR))
+            fs.mkdirSync(reader_1.DATA_DIR);
+        let useCache = false;
+        if (fs.existsSync(cachePath)) {
+            const ans = yield (0, reader_1.askQuestion)(`Voulez-vous télécharger à nouveau les ${label} (o/n) ? `);
+            useCache = ans.trim().toLowerCase() !== 'o';
+        }
+        if (useCache) {
+            const data = JSON.parse(fs.readFileSync(cachePath, 'utf-8'));
+            console.log(`${label}: ${data.length}`);
+            return data;
+        }
+        else {
+            const data = yield fetchFn();
+            fs.writeFileSync(cachePath, JSON.stringify(data, null, 2), 'utf-8');
+            console.log(`${label}: ${data.length}`);
+            return data;
+        }
     });
 }

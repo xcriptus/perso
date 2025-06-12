@@ -1,23 +1,24 @@
 {
-  "name": "comptes-coda",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
-    "watch": "tsc --watch",
-    "start": "node dist/reader.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^1.9.0",
-    "dotenv": "^16.5.0"
-  },
-  "devDependencies": {
-    "@types/node": "^24.0.1",
-    "typescript": "^5.8.3"
-  }
+    "name": "comptes-coda",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "start": "node dist/reader.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^1.9.0",
+        "dotenv": "^16.5.0"
+    },
+    "devDependencies": {
+        "@types/node": "^24.0.1",
+        "prettier": "^3.5.3",
+        "typescript": "^5.8.3"
+    }
 }

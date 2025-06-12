@@ -1,0 +1,1583 @@
+[
+  {
+    "etiquette1": "épargne - avoir",
+    "comptes": [
+      "immoC",
+      "immoMV"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "épargne - retrait",
+    "comptes": [
+      "bLAc",
+      "bCN",
+      "bLAj",
+      "bLDj",
+      "bPSc",
+      "cLDc",
+      "gFEj",
+      "afer",
+      "gFEc"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "",
+    "max": 0,
+    "min": -1000000,
+    "mois": []
+  },
+  {
+    "etiquette1": "économies",
+    "comptes": [
+      "bLAc",
+      "bCN",
+      "bLAj",
+      "bLDj",
+      "bPSc",
+      "cLDc",
+      "gFEj",
+      "afer",
+      "gFEc"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "",
+    "max": 1000000,
+    "min": 0.1,
+    "mois": []
+  },
+  {
+    "etiquette1": "virement - lili",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "virement - depuis casden",
+    "comptes": [],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "virement - casden",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "virement - sortant",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "virement - entrant",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - mobile - jm",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "GP20191002182544"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 0,
+    "min": 0,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "maison - copropriété - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "PRE-PICHA"
+    ],
+    "description": "Frais de /_sutit",
+    "frequence": "variable",
+    "max": -100,
+    "min": -210,
+    "mois": []
+  },
+  {
+    "etiquette1": "salaire - jm",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DDFIP DE L' ISERE;REMUNERATION DU"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 6500,
+    "min": 2990,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "maison - internet - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "GP202011290043326921"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": -23,
+    "min": -26,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "impôt - habitation - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "380740465066566356 222-NNFR46ZZZ005002M238001112777"
+    ],
+    "description": "",
+    "frequence": "supprimé",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "impôt - foncier - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "NNFR46ZZZ005002M338008747930"
+    ],
+    "description": "",
+    "frequence": "11 fois/an",
+    "max": -126,
+    "min": -142,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "etiquette1": "habits - habits",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "CALZEDONIA",
+      "CAROLL",
+      "DAMART",
+      "DECATHLON",
+      "ERAM",
+      "EsteeLauder FRA Paris",
+      "FALEGHUGO",
+      "FR0126 FRA Grenoble",
+      "GALERIES LAFAYETTE",
+      "GL 38GRENOBLE",
+      "IKKS WOMEN AND MEN",
+      "JACQUELINE RIU",
+      "JULES",
+      "K.X.S",
+      "LA HALLE 38SAINT MARTIN",
+      "LA MARCHE A SUI38GRENOBLE",
+      "LE BACKSTAGE",
+      "LE TEMPS DES CERISES",
+      "LILI",
+      "MARIONNAUD",
+      "PRESSING DES BU38MEYLAN",
+      "RENDEZ-VOUS EN VILLE",
+      "SUNSHINE CONCEP38GRENOBLE"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - élécricité - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "ELECTRICITE DE FRANCE"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 42,
+    "min": -41,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "maison - eau - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Eaux de G-FR80ZZZ4553430000207139"
+    ],
+    "description": "",
+    "frequence": "10 fois/an",
+    "max": -6,
+    "min": -25,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - cotisation mgen - caro",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Cotisation MGEN Offre Globale-MGEN-ORPER-2015-02789503"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": -65,
+    "min": -74,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "assurance - habitation - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Cotisation Assurance 138244205"
+    ],
+    "description": "/_sukMG habitation pour la cuevita",
+    "frequence": "1 fois/an",
+    "max": -180,
+    "min": -200,
+    "mois": [
+      1
+    ]
+  },
+  {
+    "etiquette1": "assurance - décès - jm",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "PARNASSE MAIF"
+    ],
+    "description": "Assurance décès au profit de caro (50,000€)./_suMq6",
+    "frequence": "4 fois/an",
+    "max": -110,
+    "min": -135,
+    "mois": [
+      2,
+      5,
+      8,
+      11
+    ]
+  },
+  {
+    "etiquette1": "maison - travaux éléctricité",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "BOMBINO ELECTRICITE"
+    ],
+    "description": "",
+    "frequence": "",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - dermatologue",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DR VINCENT 38GRENOBLE"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - ophtalmo",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DOCTEUR JEAN JACQUES MASELLA"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - gynécologue",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DR KLEIN PAUL"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - kiné",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "FERNANDEZ NICOLAS",
+      "ASTORI VINCENT"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - généraliste",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DR CLEMENCON 38GRENOBLE"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": -20,
+    "min": -30,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - dentiste",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DOC BERNARD 38MEYLAN"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - remboursement uga",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DDFIP DE L' ISERE;INV/",
+      "DDFIP DE L' ISERE;CNRS"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - leboncoin - vente",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": -100,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - lecture",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "UFC QUE CHOISIR",
+      "VENDRA 38GRENOBLE"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "assurance - décès - caro",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "PARNASSE MAIF"
+    ],
+    "description": "Assurance décès au profilt de lili (30,000€) /_sulzs ",
+    "frequence": "12 fois/an",
+    "max": 0,
+    "min": 0,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "assurance - habitation - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "MAIF 79038 NIORT CEDEX"
+    ],
+    "description": "/_suXRd pour la maison verte",
+    "frequence": "10 fois/an",
+    "max": -28,
+    "min": -39,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  {
+    "etiquette1": "impôt - passeport",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "TIMBRE FISCAL"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "impôt - habitation - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "NNFR46ZZZ005002M238001979839",
+      "NNFR46ZZZ0050022238038719381R817",
+      "MENSUALISE 222-M238001112777 REMB. EXCD. IMPOT"
+    ],
+    "description": "",
+    "frequence": "11 fois/an",
+    "max": 155,
+    "min": 155,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12
+    ]
+  },
+  {
+    "etiquette1": "impôt - revenu",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "IMPOT REVENUS"
+    ],
+    "description": "",
+    "frequence": "1 fois/an",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "impôt - foncier - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "NNFR46ZZZ005002M338048027386",
+      "NNFR46ZZZ005002P338044477631",
+      "NNFR46ZZZ0050022238426052457R315"
+    ],
+    "description": "",
+    "frequence": "11 fois/an",
+    "max": -114,
+    "min": -152,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ]
+  },
+  {
+    "etiquette1": "épargne -  intérêts",
+    "comptes": [
+      "bCC",
+      "bLAj",
+      "bLAc"
+    ],
+    "labels": [
+      "INTERETS"
+    ],
+    "description": "",
+    "frequence": "1 fois/an",
+    "max": 0,
+    "min": 0,
+    "mois": [
+      12
+    ]
+  },
+  {
+    "etiquette1": "divers - erreur",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "impôt - intérêts",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Prelev impots int part",
+      "Prelev. Sociaux int.part"
+    ],
+    "description": "",
+    "frequence": "2 fois/an",
+    "max": -0.3,
+    "min": -0.7,
+    "mois": [
+      5,
+      6
+    ]
+  },
+  {
+    "etiquette1": "transport - citelib",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "FRANCE AUTOPARTAGE"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "transport - bus",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "VFD BUS",
+      "AUTOCARS",
+      "FLIXBUS"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "transport - sncf",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "SNCF"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "transport - blablacar",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "BLABLACAR",
+      "Blablacar"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "alimentation - alimentation",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "2F2G 34MONTPELLIER",
+      "2H RESTAURATION",
+      "ACE RESTAURATIO38ST MARTIN D H",
+      "AMIRA BAZAR",
+      "AML 38ECHIROLLES",
+      "AMORINO",
+      "AROMES D'ASIE ET D'ORIENT",
+      "ARTISAN BOULANG38GRENOBLE",
+      "AU BON JAMBON",
+      "AU CHARDON BLEU",
+      "BIOCOOP CHAMPOLLION",
+      "BIOTYFULL FRUITS",
+      "BOULANGERIE",
+      "BROC'CAFE",
+      "BURDET SALON DE THE",
+      "BURGER KING",
+      "CAFE DE LA MAIR38grenoble",
+      "CAJU",
+      "CARMA 38GRENOBLE",
+      "CARREFOUR",
+      "CASINO",
+      "CENTRE REGIONAL OEUVRES UNIV SCOLAIRES",
+      "CHRISTAL 38",
+      "CORENC DISTRIBUTION",
+      "COSTE JEAN MARI38GRENOBLE",
+      "DCF",
+      "DOMINO'S PIZZA",
+      "DRAGONNE PIZZA",
+      "DSC SOFRA-BOUTIQUES",
+      "DU PAIN SUR LA PLANCHE",
+      "EAU VIVE",
+      "ELECLERC",
+      "EPICURIA SUCRE SALE",
+      "FACTORY CAFE",
+      "FOURNIL 38VILLARD DE LA",
+      "FOURNIL NOTRE DAME",
+      "FRANPRIX",
+      "GRENOBLE GRAND-38GRENOBLE",
+      "HAJI SAHAIB",
+      "IL NAPOLI 38GRENOBLE",
+      "INNOCHOC",
+      "INTERMARCHE",
+      "INTERM CALAO",
+      "IZLY SMONEY 75PARIS",
+      "KOHCORA 38GRENOBLE",
+      "L'AMYLOIS",
+      "L'ARTISAN 73FRONTENEX",
+      "L'EAU VIVE",
+      "L'EPICEA",
+      "L'OASIS 38GRENOBLE",
+      "LA BONNE PIOCHE38MEYLAN",
+      "LA BORIE",
+      "LA CAMIONNETTE",
+      "LA CANTINA",
+      "LA CROISSANTERIE",
+      "LA NOISETTE",
+      "LA POELE A PAELLA",
+      "LA TAB'VERTE",
+      "LE BAR RADIS 2 38GRENOBLE",
+      "LE CANBERRA",
+      "LE FOURNIL",
+      "LE MAGASIN GENERAL",
+      "LE PRINCE DE LA38GRENOBLE",
+      "LE SAX0",
+      "LES DELICES DE SEBASTIEN",
+      "LES DELICES TAC38CLAIX",
+      "LES ECRINS",
+      "LES FEES MAISON",
+      "LES HALLES SAINT BRUNO",
+      "LIDL",
+      "MAGASIN U",
+      "MARTIN TEVA DIS38GRENOBLE",
+      "MARTIN'S CAFE",
+      "MED KEBAB 38GRENOBLE",
+      "MERAKI 38GRENOBLE",
+      "MEZZO DI PASTA",
+      "MIXLAB",
+      "MONOPRIX",
+      "MUY MUCHO 38GRENOBLE",
+      "NATURALIA",
+      "OASIS SANDWICH",
+      "OBIGAND",
+      "RESTO PIZZA MON38SAINT MARTIN",
+      "RIZE MARKET",
+      "SARL LA SAVOYARDE",
+      "SAS LA GRIGNOTTE",
+      "SIMPLY MARKET",
+      "Smile&P BIG BAN38GRENOBL",
+      "Smile&P INTERAS38SAINT M",
+      "SO.BIO GENOBLE 38GRENOBLE",
+      "STARBUCKS",
+      "TARTELINE",
+      "UNE PETITE MOUSSE LE BAR",
+      "UTILE",
+      "V AND B",
+      "VIVAL",
+      "WOODIZ FR GRENOBLE",
+      "XPOLLENS IZLY"
+    ],
+    "description": "dépenses faites dans un supermarché, boulangerie, etc.",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - frais banquaire",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "FRAIS BANCAIRES",
+      "COTISATIONS BANCAIRES"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 12,
+    "min": -114,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "divers - espèces",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "RETRAIT D'ESPECES"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "épargne - emprunt - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "CASDEN - ECHEANCE PRET"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 873,
+    "min": 872,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "habits - coiffeur",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "COIFFURE",
+      "LIL'CUT",
+      "LAUREN KLEIN"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - cotisation mgen - jm",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Cotisation MGEN Offre Globale-++MGEN-ORPER-2013-02556357"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": -130,
+    "min": -150,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "maison - eau - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Eaux de G-FR80ZZZ4553430000092853"
+    ],
+    "description": "",
+    "frequence": "10 fois/an",
+    "max": -13,
+    "min": -18,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - cadeaux maman",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "Cadeaux maman",
+    "frequence": "",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "virement - interne",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "assurance - juridique ",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "BPCE Vie",
+      "BPCE PREVOYANCE"
+    ],
+    "description": "/_suHK3 ",
+    "frequence": "12 fois/an",
+    "max": -7,
+    "min": -8,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "transport - semitag",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "SEMITAG"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": -45,
+    "min": -52,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "maison - mobile - caro",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "GP202108290093292811"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 0,
+    "min": 0,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "loisir - netflix",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "NETFLIX"
+    ],
+    "description": "",
+    "frequence": "supprimé",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - copropriété - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "ABBE GREGOIR"
+    ],
+    "description": "Frais de /_suUhT",
+    "frequence": "variable",
+    "max": 5,
+    "min": -250,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - pharmacie",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "PHIE",
+      "NL ETOILE",
+      "PHARM"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - travail - mission",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Stockholm",
+      "STOCKHOLM"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - à classer",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Mol Cab Med FRA",
+      "SELARL CECILE B38MEYLAN"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - internet - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "factu-M0038427804",
+      "0274138226 REMB. ORANGE",
+      "GP202208170158853104"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 60,
+    "min": -10,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "maison - gaz - mverte",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "ENGIE"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 76,
+    "min": -270,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "santé - remboursement mgen",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "MUTUELLE GENERALE EDUCAT"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "loisir - restaurant",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "A MA FACON 38GRENOBLE",
+      "AMORINO",
+      "CASE A PIZZA 38SAINT LAURENT",
+      "FROMAGERIE DU GRAND PRE",
+      "FUOCO PIZZA",
+      "HAGAPE RESTAURATION",
+      "IL NAPOLI 38GRENOBLE",
+      "JARDIN D'ASIE",
+      "L'INDOCHINOIS",
+      "LA MAISON SYRIENNE",
+      "LE CANBERRA",
+      "LE PALAIS DU SUD",
+      "LE PUNJAB",
+      "MALA 38GRENOBLE",
+      "MARTIN'S CAFE",
+      "MED KEBAB 38GRENOBLE",
+      "MOSAIQUE",
+      "NAMASTAY",
+      "O BO BUN",
+      "OLD EREVAN 38GRENOBLE",
+      "PAUL 38MEYLAN",
+      "RESTAURANT LE MIRADOU",
+      "ROYAL TANDOORI",
+      "SASU BILEL 38GRENOBLE",
+      "SUMUP CUISTOTFR VARS SUR ROS",
+      "THAI EXPRESS",
+      "UNE SEMAINE SUR DEUX"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "salaire - caro",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DDFIP DE L' ISERE;REMUNERATION DU"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 2300,
+    "min": 1500,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "divers",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "loisir - vacances - logement",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "Sandrine Montigny"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - à classer - chèque",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "CHEQUE"
+    ],
+    "description": "Chéque à classer",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - psy",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "PETER ANNE"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": -50,
+    "min": -55,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - podologue",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "CENTRE DE PODOLOGIE",
+      "ECHO 38"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "intérêt - dividendes casden",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "INTERETS EXERCICE 20",
+      "VERS.INT. PARTS SOCIALES CASDEN"
+    ],
+    "description": "",
+    "frequence": "2 fois/an",
+    "max": 15,
+    "min": 2,
+    "mois": [
+      5,
+      6
+    ]
+  },
+  {
+    "etiquette1": "transport - à classer",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - élécricité - cuevita",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "GAZ ET ELECTRICITE DE GR"
+    ],
+    "description": "",
+    "frequence": "12 fois/an",
+    "max": 45,
+    "min": -74,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "loisir - vacances - voiture",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "loisir - transport",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "loisir - vacances - divers",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "maison - équipement",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "BAGSHOP",
+      "BOTANIC",
+      "C'EST 2 EUROS",
+      "CAEM 38ECHIROLLES",
+      "CASTORAMA",
+      "CENTRAKOR STORES",
+      "DARTY",
+      "ENTREPOT DU BRICOLAGE",
+      "FALEGHUGO 38GRENOBLE",
+      "IKEA",
+      "SIS - DIS - GM -"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "divers - à classer - amazon",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "AMAZON"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "assurance - darty",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "DARFAVRE000"
+    ],
+    "description": "Extension de garantie/_suwGM#_lu8zc",
+    "frequence": "12 fois/an",
+    "max": -12,
+    "min": -12,
+    "mois": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  {
+    "etiquette1": "loisir - cinéma",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "LE CLUB 38GRENOBLE",
+      "PATHE GREN CHA"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": 0,
+    "min": 0,
+    "mois": []
+  },
+  {
+    "etiquette1": "santé - sport",
+    "comptes": [
+      "bCC"
+    ],
+    "labels": [
+      "AMAZONIA",
+      "FIFTY-NINE",
+      "ESSENJY"
+    ],
+    "description": "",
+    "frequence": "variable",
+    "max": -33,
+    "min": -40,
+    "mois": []
+  }
+]
