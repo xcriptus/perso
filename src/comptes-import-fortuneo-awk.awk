@@ -47,12 +47,20 @@ function is_equal(x, y, eps) {
     return (x - y + 0.0< eps) && (y - x + 0.0 < eps)
 }
 
+# function infere_type_operation(info) {
+
+# }
+
 #---- body -----------------------------------------------------------------------------------------
 
   BEGIN {
-      # solde=solde+0.0                  # conversion vers un nombre
+      DEBUG=0     # solde=solde+0.0                  # conversion vers un nombre
+      PRINT_HEADER=0
+      printf "" > output
       # solde_actuel=solde_actuel+0.0    # conversion vers un nombre
-      print "_date de comptabilisation;_date operation;_date de valeur;_info;_type operation;_debit;_credit;_pointage;_compte;_numero;_code;_montant;_solde" > output
+      if (PRINT_HEADER) {
+        print "_date de comptabilisation;_date operation;_date de valeur;_info;_type operation;_debit;_credit;_pointage;_compte;_numero;_code;_montant;_solde" >> output
+      }
       num_ligne = 0
   }
   # lit le header
@@ -79,11 +87,11 @@ function is_equal(x, y, eps) {
     checkDate(champ, date_de_valeur)
 
     champ = "libelle"
-    info                      = $(H[champ])
+    libelle                      = $(H[champ])
 
-    type_operation            = "TODO" # $(H["Type operation"])
-    # TODO: vérifier si il faut faire un calcul ou pas
-    #       voir le fichier importer.md
+    # sera éventuellement utilisé pour inférer le type d'opération
+    type_operation               = "TODO"
+    info                         = libelle # éventuellement modifié plus tard 
 
     champ = "Debit"
     debit                     = normalise_nombre($(H[champ]))
@@ -104,13 +112,59 @@ function is_equal(x, y, eps) {
     montant                   = debit ? debit : credit
 
     solde                     = solde + montant
-         # printf "\n\n\n" >> output
 
-    printf "%s;%s;%s;", date_de_comptabilisation, date_operation, date_de_valeur >> output
-    printf "%s;", info >> output
-    printf "%s;%s;%s;%s;", type_operation, debit, credit, pointage >> output
-    printf "%s;%s;%s;%s;%s", code_compte, numero, code, montant, solde >> output
-    printf "\n" >> output
+
+    changement = 0
+    # infère le type d'opération/info à partir du libellé et amélior
+    if (match(libelle, /CARTE ([0-9][0-9]\/[0-9][0-9]) (.*$)/, m)) {
+      checkInt("montant(Carte bancaire)", montant, "<0")
+      type_operation = "Carte bancaire"
+      info = "CB- " m[1] " " m[2]
+      changement = 1
+    } else if (match(libelle, /ANN CARTE (.*$)/, m)) {   
+      checkInt("montant(Carte bancaire)", montant, ">0")
+      type_operation = "Carte bancaire"
+      info = "CB+ " m[1]
+      changement = 1
+    } else if (match(libelle, /RET DAB ([0-9][0-9]\/[0-9][0-9])(\/[0-9][0-9])? (.*)/, m)) {
+      checkInt("montant(Carte bancaire)", montant, "<0")
+      type_operation = "Retrait d'especes"
+      info = "CB- DAB " m[1]m[2] " " m[3]
+      changement = 1
+    } else if (match(libelle, /VIR (.*)/, m))  {
+      if (montant < 0) {
+        type_operation = "Virement"
+        info = "VIR- " m[1]
+      } else {
+        type_operation = "Virement recu"
+        info = "VIR+ " m[1]        
+      }      
+      changement = 1
+    } else if (match(libelle, /CHQ (.*)/, m))  {
+      if (montant < 0) {
+        type_operation = "Cheque"
+        info = "CHQ- " m[1]
+      } else {
+        type_operation = "Depot de cheque"
+        info = "CHQ+ " m[1]        
+      }      
+      changement = 1
+    } else {
+      erreur("libelle", "Impossible d'inférer le type d'opération depuis  : " libelle)
+      type_operation = "TODO"
+    }
+
+    if (DEBUG) {
+      if (changement) {
+        print(libelle "     ->  "type_operation " || " info " || " montant)
+      }
+   }
+
+    printf("%s;%s;%s;", date_de_comptabilisation, date_operation, date_de_valeur) >> output
+    printf("%s;", info) >> output
+    printf("%s;%s;%s;%s;", type_operation, debit, credit, pointage) >> output
+    printf("%s;%s;%s;%s;%s", code_compte, numero, code, montant, solde) >> output
+    printf("\n") >> output
   }
   NR == 2 {
     premiere_date = date_de_comptabilisation
@@ -121,8 +175,17 @@ function is_equal(x, y, eps) {
     printf "solde calculé = %s\n", solde
     printf "solde actuel = %s\n", solde_actuel
     if (is_equal(solde,solde_actuel,0.01)) {
-       print "Le solde caculé est le correct. Super !"
+       print "✅   Le solde calculé est le correct. Super !"
+       balance="ok"
     } else {
-       print "⚠️ ERREUR ! Solde actuel (" solde_actuel ") != solde calculé (" solde ")" > "/dev/stderr"
+       print "⚠️   ERREUR ! Solde actuel (" solde_actuel ") != solde calculé (" solde ")" > "/dev/stderr"
+       balance="ko"
+    }
+    print("NOTE: les types d'operation suivants ne sont pas encore inférés pour Fortuneo par manque d'exemples.")
+    print("      Divers, Frais bancaires, Prelevement, Virtuel")
+    if (balance == "ok") {
+      exit 0
+    } else {
+      exit 1
     }
   }

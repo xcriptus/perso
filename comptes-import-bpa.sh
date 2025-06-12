@@ -33,13 +33,27 @@ SOLDE_ACTUEL=${5?}        # e.g. 2830.10, solde acutel, à prendre du compte BPA
 
 # "Date de comptabilisation;Libelle simplifie;Libelle operation;Reference;Informations complementaires;Type operation;Categorie;Sous categorie;Debit;Credit;Date operation;Date de valeur;Pointage operation"
 SEPARATOR=";"
+BANQUE="BPA"         # e.g.  BPA
+BANQUE_CSV_DIR=/D2/PERSO-LOCAL/BANQUE/BANQUE-$BANQUE/CSV/$CODE_COMPTE
 MAIN_DIR=/D2/perso/
 INPUT_DIR=${MAIN_DIR?}/input
-OUTPUT_DIR=${MAIN_DIR?}/output
+UNIFIED_DIR=${MAIN_DIR?}/output/unifie
 TMP_DIR=${MAIN_DIR?}/tmp
 INPUT_FILE=${INPUT_DIR?}/${CSV?}.csv
-OUTPUT_FILE=${OUTPUT_DIR?}/out-${CSV?}.csv
+UNIFIED_FILE=${UNIFIED_DIR?}/unifie-${CSV?}.csv
 TMP_FILE=${TMP_DIR?}/tmp-${CSV?}.txt
+
+# vérifie que le fichier d'entrée existe
+if [ ! -f "${INPUT_FILE?}" ]; then
+  echo "⚠️  Le fichier d'entrée ${INPUT_FILE?} n'existe pas." >&2
+  exit 1
+fi
+
+# crée le dossier de sortie s'il n'existe pas
+if [ ! -d "${UNIFIED_DIR?}" ]; then
+  echo "Création du dossier de sortie ${UNIFIED_DIR?}."
+  mkdir -p "${UNIFIED_DIR?}"
+fi
 
 # garde le header original
 head -n 1 ${INPUT_FILE?} \
@@ -61,5 +75,28 @@ cat ${TMP_FILE? } \
         -v numero="${DERNIER_NUMERO?}" \
         -v solde="${DERNIER_SOLDE?}" \
         -v solde_actuel="${SOLDE_ACTUEL?}" \
-        -v output="${OUTPUT_FILE?}" \
+        -v output="${UNIFIED_FILE?}" \
         -f src/comptes-import-bpa-awk.awk
+
+# si gawk retourne une erreur, on quitte le script 
+if [ $? -ne 0 ]; then
+  echo "⚠️  Une erreur est survenue lors de l'exécution de gawk." >&2
+  exit 1
+fi
+  
+# demande à l'utilisateur s'il veut copier le fichier de sortie dans le dossier de la banque
+read -p "Voulez-vous copier les fichiers csv (original/unifié) dans le dossier de la banque ? (o/n) " choix
+if [[ "$choix" == "o" || "$choix" == "O" ]]; then
+  # vérifie que le dossier de la banque existe
+  if [ ! -d "${BANQUE_CSV_DIR?}" ]; then
+    echo "Le dossier de la banque ${BANQUE_CSV_DIR?} n'existe pas. Création du dossier."
+    mkdir -p "${BANQUE_CSV_DIR?}"
+  fi
+  cp "${INPUT_FILE?}" "${BANQUE_CSV_DIR?}/"
+  cp "${UNIFIED_FILE?}" "${BANQUE_CSV_DIR?}/"
+  echo "Fichiers copiés dans ${BANQUE_CSV_DIR?}/"
+else
+  echo "Fichiers non copiés."
+fi
+# Affiche le nombre de lignes du fichier de sortie
+echo "Nombre de lignes dans le fichier de sortie : $(wc -l < "${UNIFIED_FILE?}")"

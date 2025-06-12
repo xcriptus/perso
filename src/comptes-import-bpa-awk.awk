@@ -124,8 +124,15 @@ function is_equal(x, y, eps) {
     printf "solde calculé = %s\n", solde
     printf "solde actuel = %s\n", solde_actuel
     if (is_equal(solde,solde_actuel,0.01)) {
-       print "Le solde caculé est le correct. Super !"
+       print "✅   Le solde calculé est le correct. Super !"
+       balance="ok"
     } else {
-       print "⚠️ ERREUR ! Solde actuel (" solde_actuel ") != solde calculé (" solde ")" > "/dev/stderr"
+       print "⚠️   ERREUR ! Solde actuel (" solde_actuel ") != solde calculé (" solde ")" > "/dev/stderr"
+       balance="ko"
+    }
+    if (balance == "ok") {
+      exit 0
+    } else {
+      exit 1
     }
   }
