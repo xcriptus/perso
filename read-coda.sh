@@ -3,13 +3,13 @@
 TOKEN_NAME="comptes-coda"
 API_TOKEN=$(awk -v name="$TOKEN_NAME" '$1 == name {print $2}' ~/.coda-tokens)
 DOC_ID="WL5JxvhRRj"
-TABLE_ID="table--BYvLj69gT"
+TABLE_ID=grid-ulTAtCLNld    # "table--BYvLj69gT"
 
 JSON_FILE=tmp/test.json
 
 # Appel API pour récupérer les lignes de la table
-curl -s -H "Authorization: Bearer $API_TOKEN" \
-    "https://coda.io/apis/v1/docs/$DOC_ID/tables/$TABLE_ID/rows" \
+URL="https://coda.io/apis/v1/docs/$DOC_ID/tables/$TABLE_ID/rows"
+curl -s -H "Authorization: Bearer $API_TOKEN" ${URL?} \
 | sed -e 's/\\n/@@@/g' \
 | jq -r '
         .items as $rows
